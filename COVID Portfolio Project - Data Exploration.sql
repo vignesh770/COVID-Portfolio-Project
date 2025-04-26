@@ -11,8 +11,6 @@ Where continent is not null
 order by 3,4
 
 
--- Select Data that we are going to be starting with
-
 Select Location, date, total_cases, new_cases, total_deaths, population
 From PortfolioProject..CovidDeaths
 Where continent is not null 
@@ -20,7 +18,7 @@ order by 1,2
 
 
 -- Total Cases vs Total Deaths
--- Shows likelihood of dying if you contract covid in your country
+-- Shows likelihood of dying 
 
 Select Location, date, total_cases,total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
